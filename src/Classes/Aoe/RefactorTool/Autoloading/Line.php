@@ -61,7 +61,7 @@ class Line
      */
     public function isClassDefinition()
     {
-        if (preg_match('~^class\s[A-z]~', $this->contents)) {
+        if (preg_match('~^class\s+[A-z]~', $this->contents)) {
             return true;
         }
         return false;
@@ -72,7 +72,7 @@ class Line
      */
     public function isOpeningPHP()
     {
-        if (preg_match('~^\<\?php~', $this->contents)) {
+        if (preg_match('~^\<\?php\s*$~', $this->contents)) {
             return true;
         }
         return false;
