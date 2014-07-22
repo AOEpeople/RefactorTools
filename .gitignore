@@ -1,0 +1,4 @@
+/lib/
+/bin/
+.idea/
+/composer.lock
