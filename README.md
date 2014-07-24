@@ -20,8 +20,9 @@ The usage is easy. Just execute the refactor-tool.php and you will get a list of
 ```bash
 $ php refactor-tool.php help
 ```
+### Commands / Functionalities
 
-### Autoloading
+#### autoloading
 
 This command removes all "require" and "require_once" statements from your PHP class files. This is very helpful, if you have just
 implemented an autoloader and now want to clean up your code and make sure your autoloading is working correctly.
@@ -37,3 +38,16 @@ Here is an example usage:
 ```bash
 $ php refactor-tool.php autoloading /path/to/my/project
 ```
+
+##### --restrict
+
+If you want to restrict the removals of requrie statements, you can use the "---restrict" option.
+This option requires a valid regular expression. If given, only statements will be removed, that matches against this pattern.
+Here is an example usage:
+```bash
+$ php refactor-tool.php autoloading /path/to/my/project --restrict '~my_pattern\-(.*)~'
+```
+
+#### ...
+
+#### ...
